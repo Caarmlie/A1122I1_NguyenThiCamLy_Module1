@@ -6,72 +6,131 @@
     <link rel="stylesheet" href="Form%20hobby.css">
 </head>
 
-<body>
-<h2>Your hobbies</h2>
-<br>
-<form action="yourhobbies.html" mthod="post"></form>
-<table>
-    <tr>
-        <td>
-            <label for="yourname" id="yourname">Your name:</label>
-        </td>
-        <td>
-            <input type="text" name="Yourname">
-        </td>
-    </tr>
+<style>
+    h2{
+        background: coral;
+        text-align: center;
+    }
+</style>
 
-    <tr>
-        <td>
-            <label for="Email" id="email">Email:</label>
-        </td>
-        <td>
-            <input type="text" name="Email">
-        </td>
-    </tr>
+<div class="m">
 
-    <tr>
-        <td>
-            <label for="Hobby" id="hobby">Hobby: </label>
-        </td>
+    <body>
+    <h2>
+        <span class="heading" >Your hobbies</span>
 
+    </h2>
+    <br>
+    <form action="yourhobbies.html" mthod="post" class="n"></form>
+    <table>
+        <tr>
+            <td>
+                <label for="yourname" class="n" >Your name:</label>
+            </td>
+            <td>
+                <input type="text" name="Yourname" id="yourname" >
+            </td>
 
-        <!--            -->
-        <td>
-            <input type="checkbox" name="Sport">
-            <label for="Sport" id="sport">Sport</label>
-            <input type="checkbox" name="Music">
-            <label for="Music" id="music">Music</label>
-            <input type="checkbox" name="Reading book">
-            <label for="Reading book" id="Reading book">Reading book</label>
-            <table>
-                <tr>
+        </tr>
+        <!---->
+        <tr>
+            <td>
+                <label for="Email" class="n">Email:</label>
+            </td>
+            <td>
+                <input type="text" name="Email" id="Email">
+            </td>
+        </tr>
+        <!---->
+        <tr>
 
-                    <td>
-                        <input type="checkbox" name="Web">
-                        <label for="Web" id="Web">Web</label>
-                        <input type="checkbox" name="Play game">
-                        <label for="Play game" id="Play game">Play game</label>
-                        <input type="checkbox" name="Film">
-                        <label for="Film" id="Film">Film</label>
-                    </td>
+            <div class="lablel-table">
+                <label for="Hobby" id="hobby"class="n">Hobby: </label>
 
-                </tr>
+                <div class="color-text">
 
 
-                <tr>
-                    <td>
-                        <input type="checkbox" name="Travel">
-                        <label for="Travel" id="Travel">Travel</label>
-                    </td>
-                </tr>
-                <td>
-                    <input type="submit" Submit Form>
-                    <input type="reset" Reset form>
-                </td>
-                </td>
-            </table>
+                    <table>
+
+                        <tr>
+
+                            <td>
+
+                                <input type="checkbox" name="Sport" class="sp">
+                                <label for="Sport" id="sport" class="color-text">Sport</label>
+
+                            </td>
+
+                            <td>
+
+                                <input type="checkbox" name="Music">
+                                <label for="Music" id="music" class="color-text" >Music</label>
+
+                            </td>
+
+                            <td>
+
+                                <input type="checkbox" name="Reading book">
+                                <label for="Reading book" id="Reading book" class="color-text" >Reading book</label>
+
+                            </td>
 
 
-</table>
-</body>
+                        </tr>
+
+
+                        <tr>
+
+
+                            <td>
+
+                                <input type="checkbox" name="Web" class="sp">
+                                <label for="Web" id="Web" class="color-text" >Web</label>
+
+                            </td>
+
+                            <td>
+
+                                <input type="checkbox" name="Play game">
+                                <label for="Play game" id="Play game" class="color-text" >Play game</label>
+
+                            </td>
+
+                            <td>
+
+                                <input type="checkbox" name="Film">
+                                <label for="Film" id="Film" class="color-text" >Film</label>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="Travel" id="Travel" class="sp" >
+                                <label for="Travel" class="color-text" >Travel</label>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <input type="submit" class="sp" Submit Form>
+                    <input type="reset"  Reset form>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+        </tr>
+
+    </table>
+    </body>
+
+</div>
+
 </html>

@@ -7,3 +7,52 @@
     padding:0;
 
 }
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: lightblue;
+}
+.heading{
+    text-align: center;
+    background: #f58055;
+    width:  400px;
+    height: 50px;
+    color: white;
+}
+
+.n {
+color: blue;
+}
+
+#hobby{
+    position: relative;
+}
+
+.lablel-table{
+    position: absolute;
+    display: inline-block;
+
+
+}
+
+.sp{
+    margin-left: 76px;
+}
+
+#hobby{
+    top:50px;
+
+}
+.m{
+    margin-top: 50px;
+    margin-left:50px;
+    background-color: white;
+    width: 30%;
+}
+
+
+.color-text {
+    color: chocolate;
+}
+
+
