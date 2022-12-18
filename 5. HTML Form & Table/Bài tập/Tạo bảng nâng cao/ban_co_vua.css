@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: orange;
+}
+th,td{
+    border-collapse: collapse;
+    width: 11%;
+    border: 1px solid #333333;
+    padding: 1rem
+
+}
+th{
+    font-size: 20px;
+    width: 70px;
+}
+td{
+    width: 100px;
+    height: 100px;
+}
+.white{
+    background-color: white;
+}
+
+.black{
+    background-color: black;
+}
+
+table,td{
+    border: 0.01px solid white;
+    border-collapse: collapse;
+}
+
+
