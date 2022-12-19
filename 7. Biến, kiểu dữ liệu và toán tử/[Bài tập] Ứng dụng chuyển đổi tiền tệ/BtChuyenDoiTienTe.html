@@ -6,7 +6,6 @@
 </head>
 <body>
 
-<form action="BtChuyenDoiTienTe.html">
 
 <div>
 
@@ -44,33 +43,32 @@
                 <button onclick="convert()">Convert</button>
             </td>
         </tr>
-        <p style="blue: blue" id="show_message"></p>
 
     </table>
 
 </div>
 
-</form>
+
 
 <!---->
 
 <script>
 
-    function convert(value.money) {
+    function convert() {
         let a = parseInt(document.getElementById("amount").value)
-        let value = money.value
+        let b = document.getElementById("fromCurrency").value
+        let c = document.getElementById("toCurrency").value
+        let result;
 
-        if(value === 'VND' && value === 'USD'){
-            convert=a*23;
-            alert(convert)
-        }if else(value === 'USD'&& value === 'VND'){
-            convert=a/23;
-            alert(convert)
+        if(b==c){
+            alert("Mời bạn nhập lại")
+        }else if(b == "VND"){
+            result=a/23;
+            alert(result)
         }else{
-            alert(Mời bạn nhập lại)
+            result=a*23;
+            alert(result)
         }
-
-
     }
 
 </script>
