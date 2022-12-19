@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.</title>
+</head>
+<body>
+
+    <label for="age"><b>Nhập tuổi của bạn</b></label>
+    <input type="text" id="a">
+    <button onclick="submit()">Submit</button>
+
+</body>
+
+<!--JS-->
+
+<script>
+
+    function submit() {
+
+        let age = parseInt(document.getElementById("a").value)
+
+        if(age<15){
+            document.write("Bạn chưa đủ tuổi vào lớp 10")
+        }else{
+            document.write("Bạn đã đủ tuổi vào lớp 10")
+        }
+
+
+    }
+
+</script>
+
+</html>
