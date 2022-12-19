@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+
+
+    <form action="computerApplication.html">
+
+
+            <div>
+
+                        <label for="firstNumber"></label>
+                        <input type="text" id="firstNumber" name="firstNumber">
+                        <label for="secondNumber"></label>
+                        <input type="text" id="secondNumber" name="secondNumber">
+                <br>
+<!--                        <input type="button"id="Addition" name="Addition" value="Addition (+)">-->
+                        <button type="button" onclick="addition()">Addition</button>
+
+<!--                        <input type="button"id="Subtraction"name="Subtraction"value="Subtraction (-)">-->
+                        <button type="button" onclick="subtraction()">Subtraction</button>
+
+<!--                        <input type="button"id="Multiplication"name="Multiplication"value="Multiplication (X)">-->
+                        <button type="button" onclick="multiplication()">Multiplication</button>
+
+<!--                        <input type="button"id="Division"name="Division"value="Division (/)">-->
+                        <button type="button" onclick="division()">Division</button>
+            </div>
+
+
+    </form>
+<!---->
+    <script>
+
+        function addition() {
+                let a = parseInt(document.getElementById("firstNumber").value)
+                let b = parseInt(document.getElementById("secondNumber").value)
+                let Result = a + b;
+                alert(Result)
+        }
+
+        function subtraction() {
+            let a = parseInt(document.getElementById("firstNumber").value)
+            let b = parseInt(document.getElementById("secondNumber").value)
+            let Result = a - b;
+            alert(Result)
+        }
+
+        function multiplication() {
+            let a = parseInt(document.getElementById("firstNumber").value)
+            let b = parseInt(document.getElementById("secondNumber").value)
+            let Result = a * b;
+            alert(Result)
+        }
+
+        function division() {
+            let a = parseInt(document.getElementById("firstNumber").value)
+            let b = parseInt(document.getElementById("secondNumber").value)
+            if (b==0){
+                document.write("Mời bạn nhập lại")
+            }else{
+                let Result = a / b;
+                alert(Result)
+            }
+
+        }
+
+    </script>
+</body>
+</html>

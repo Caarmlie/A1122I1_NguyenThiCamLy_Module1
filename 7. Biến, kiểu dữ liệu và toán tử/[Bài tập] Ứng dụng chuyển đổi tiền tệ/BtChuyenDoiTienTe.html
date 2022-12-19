@@ -8,85 +8,70 @@
 
 <form action="BtChuyenDoiTienTe.html">
 
-    <div class="fm">
+<div>
 
-        <table>
+    <table>
 
-            <tr>
+        <tr>
 
-                <td>
-                    <label for="Amount" id="Amount"><b>Amount</b></label>
-                    <br>
-                    <input type="text" name="Amount">
-                </td>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                <input type="text" id="amount" name="amount">
+            </td>
 
-                <td>
-                    <label for="fromCurrency""><b>From Currency</b></label>
-                    <br>
-                    <select name="fromCurrency" id="fromCurrency">
-                        <option value="VietNam">Viet Nam</option>
-                        <option value="USD">USD</option>
-                    </select>
-                </td>
+            <td>
+                <label for="fromCurrency"></label>
+                <select name="fromCurrency" id="fromCurrency">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
 
-                <td>
-                    <label for="toCurrency"><b>To Currency</b></label>
-                    <br>
-                    <select name="toCurrency" id="toCurrency">
-                        <option value="USD">USD</option>
-                        <option value="VietNam">VietNam</option>
-                    </select>
-                </td>
+            <td>
+                <label for="toCurrency"></label>
+                <select name="toCurrency" id="toCurrency">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
 
-                <td>
-                    <label for="Convert" id="Convert"></label>
-                    <br>
-                    <input type="button" value="Convert" onclick="Convert">
-                </td>
+            <td>
+                <button onclick="convert()">Convert</button>
+            </td>
+        </tr>
+        <p style="blue: blue" id="show_message"></p>
 
-            </tr>
+    </table>
 
-            <br>
-
-            <p id="Result"></p>
-
-        </table>
-
-    </div>
-
+</div>
 
 </form>
 
+<!---->
 
 <script>
 
-    function plus(){
-        let a = parseInt(document.getElementById("first-text").value);
-        let b = parseInt(document.getElementById("second-text").value);
-        let result = a + b;
-        document.getElementById("result").innerText = "Result: "+result;
-    }
+    function convert(value.money) {
+        let a = parseInt(document.getElementById("amount").value)
+        let value = money.value
 
-    function minus(){
-        let a = parseInt(document.getElementById("first-text").value);
-        let b = parseInt(document.getElementById("second-text").value);
-        let result = a - b;
-        document.getElementById("result").innerText = "Result: "+result;
-    }
-    function multy(){
-        let a = parseInt(document.getElementById("first-text").value);
-        let b = parseInt(document.getElementById("second-text").value);
-        let result = a * b;
-        document.getElementById("result").innerText = "Result: "+result;
-    }
-    function divide(){
-        let a = parseInt(document.getElementById("first-text").value);
-        let b = parseInt(document.getElementById("second-text").value);
-        let result = a / b;
-        document.getElementById("result").innerText = "Result: "+result;
-    }
+        if(value === 'VND' && value === 'USD'){
+            convert=a*23;
+            alert(convert)
+        }if else(value === 'USD'&& value === 'VND'){
+            convert=a/23;
+            alert(convert)
+        }else{
+            alert(Mời bạn nhập lại)
+        }
 
 
+    }
 
 </script>
 
