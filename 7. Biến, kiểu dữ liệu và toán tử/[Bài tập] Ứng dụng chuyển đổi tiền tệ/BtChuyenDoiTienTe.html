@@ -48,6 +48,7 @@
 
             <br>
 
+            <p id="Result"></p>
 
         </table>
 
@@ -59,27 +60,30 @@
 
 <script>
 
-    function result(){
-        let fromCurrency = document.getElementById("fromCurrency").value;
-        let toCurrency = document.getElementById("toCurrency").value;
-        let RE = parseInt(document.getElementById("Amount").value);
-        let Current;
+    function plus(){
+        let a = parseInt(document.getElementById("first-text").value);
+        let b = parseInt(document.getElementById("second-text").value);
+        let result = a + b;
+        document.getElementById("result").innerText = "Result: "+result;
+    }
 
-        if(fromCurrency == "USD" && toCurrency == "USD"){
-            Current = RE;
-            document.getElementById("Current").innerText = "Result: "+Current +" USD";
-        }else if(fromCurrency=="VND" && toCurrency =="VND"){
-            Current = RE;
-            document.getElementById("Current").innerText = "Result: "+Current +" VND";
-        }
-        else if(fromCurrency=="USD" && toCurrency =="VND"){
-            Current = RE*23545;
-            document.getElementById("Current").innerText = "Result: "+Current +" VND";
-        }else if(fromCurrency=="VND" && toCurrency =="USD"){
-            Current = RE*0.000042;
-            document.getElementById("Current").innerText = "Result: "+Current +" USD";
-        }
-        document.write(Current)
+    function minus(){
+        let a = parseInt(document.getElementById("first-text").value);
+        let b = parseInt(document.getElementById("second-text").value);
+        let result = a - b;
+        document.getElementById("result").innerText = "Result: "+result;
+    }
+    function multy(){
+        let a = parseInt(document.getElementById("first-text").value);
+        let b = parseInt(document.getElementById("second-text").value);
+        let result = a * b;
+        document.getElementById("result").innerText = "Result: "+result;
+    }
+    function divide(){
+        let a = parseInt(document.getElementById("first-text").value);
+        let b = parseInt(document.getElementById("second-text").value);
+        let result = a / b;
+        document.getElementById("result").innerText = "Result: "+result;
     }
 
 
