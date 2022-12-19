@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không</title>
+</head>
+<body>
+
+    <label for="a"><b>Nhập số a</b></label>
+    <input type="text" id="a">
+    <label for="b"><b>Nhập số b</b></label>
+    <input type="text" id="b">
+    <button onclick="submit()">Submit</button>
+
+</body>
+
+<!--JS-->
+<script>
+
+    function submit() {
+        let a = parseInt(document.getElementById("a").value)
+        let b = parseInt(document.getElementById("b").value)
+        let result = a%b;
+        let ketQua = a/b;
+
+        if(b==0){
+            document.write("Xin mời bạn nhập lại")
+        }else if (result == 0){
+            document.write("a chia hết cho b " +".Đáp án của phép tính là: " + ketQua)
+        }else{
+            document.write("a không chia hết cho b "+".Đáp án của phép tính là: " + ketQua)
+        }
+
+    }
+
+</script>
+
+</html>
