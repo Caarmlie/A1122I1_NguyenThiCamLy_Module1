@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+
+<form action="BtChuyenDoiTienTe.html">
+
+    <div class="fm">
+
+        <table>
+
+            <tr>
+
+                <td>
+                    <label for="Amount" id="Amount"><b>Amount</b></label>
+                    <br>
+                    <input type="text" name="Amount">
+                </td>
+
+                <td>
+                    <label for="fromCurrency""><b>From Currency</b></label>
+                    <br>
+                    <select name="fromCurrency" id="fromCurrency">
+                        <option value="VietNam">Viet Nam</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </td>
+
+                <td>
+                    <label for="toCurrency"><b>To Currency</b></label>
+                    <br>
+                    <select name="toCurrency" id="toCurrency">
+                        <option value="USD">USD</option>
+                        <option value="VietNam">VietNam</option>
+                    </select>
+                </td>
+
+                <td>
+                    <label for="Convert" id="Convert"></label>
+                    <br>
+                    <input type="button" value="Convert" onclick="Convert">
+                </td>
+
+            </tr>
+
+            <br>
+
+
+        </table>
+
+    </div>
+
+
+</form>
+
+
+<script>
+
+    function result(){
+        let fromCurrency = document.getElementById("fromCurrency").value;
+        let toCurrency = document.getElementById("toCurrency").value;
+        let RE = parseInt(document.getElementById("Amount").value);
+        let Current;
+
+        if(fromCurrency == "USD" && toCurrency == "USD"){
+            Current = RE;
+            document.getElementById("Current").innerText = "Result: "+Current +" USD";
+        }else if(fromCurrency=="VND" && toCurrency =="VND"){
+            Current = RE;
+            document.getElementById("Current").innerText = "Result: "+Current +" VND";
+        }
+        else if(fromCurrency=="USD" && toCurrency =="VND"){
+            Current = RE*23545;
+            document.getElementById("Current").innerText = "Result: "+Current +" VND";
+        }else if(fromCurrency=="VND" && toCurrency =="USD"){
+            Current = RE*0.000042;
+            document.getElementById("Current").innerText = "Result: "+Current +" USD";
+        }
+        document.write(Current)
+    }
+
+
+
+</script>
+
+</body>
+</html>
