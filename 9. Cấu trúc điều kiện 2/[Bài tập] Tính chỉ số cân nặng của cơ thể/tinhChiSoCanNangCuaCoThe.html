@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+    <table>
+
+        <tr>
+            <td>
+                <label for="weight"><b>Your weight</b></label>
+                <input placeholder="kg" type="text" id="weight">
+            </td>
+            <br>
+
+            <td>
+                <label for="height"><b>Your height</b></label>
+                <input placeholder="cm" type="text" id="height">
+            </td>
+
+            <td>
+                <button onclick="submit()">Submit</button>
+            </td>
+        </tr>
+
+    </table>
+<!--JS-->
+    <script>
+
+        function submit() {
+            let weight = parseInt(document.getElementById("weight").value)
+            let height = parseInt(document.getElementById("weight").value)
+            let bmi = weight / ( height^2 );
+
+            if (bmi <18.5){
+                alert("Underweight"+bmi)
+            } else if (bmi >= 18.5 && bmi < 25.0){
+                alert("Nomal"+bmi)
+            }else if (bmi >= 25.0 && bmi <30.0){
+                alert("Overweight"+bmi)
+            }else{
+                alert("Obese"+bmi)
+            }
+        }
+
+    </script>
+</body>
+</html>
