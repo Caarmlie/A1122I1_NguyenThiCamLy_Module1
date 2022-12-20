@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</title>
+</head>
+<body>
+
+<table>
+
+    <tr>
+        <td>
+            <label for="num1"><b>Nhập số nguyên thứ nhất</b></label>
+            <input type="text" id="num1">
+        </td>
+
+        <br>
+
+        <td>
+            <label for="num2"><b>Nhập số nguyên thứ 2</b></label>
+            <input type="text" id="num2">
+        </td>
+
+        <br>
+
+        <td>
+            <label for="num3"><b>Nhập số nguyên thứ 3</b></label>
+            <input type="text" id="num3">
+        </td>
+        <br>
+        <td>
+            <button onclick="submit()">Submit</button>
+        </td>
+
+    </tr>
+
+</table>
+
+</body>
+
+<script>
+
+    function submit() {
+        let num1 = parseInt(document.getElementById("num1").value)
+        let num2 = parseInt(document.getElementById("num2").value)
+        let num3 = parseInt(document.getElementById("num3").value)
+
+        if(num1 > num2 && num1 > num3){
+            document.write("Số nguyên thứ 1 là số lớn nhất")
+        } else if (num2 > num1 && num2 > num3){
+            document.write("Số nguyên thứ 2 là số lớn nhất")
+        }else{
+            document.write("Số nguyên thứ 3 là số lớn nhất")
+        }
+
+    }
+
+</script>
+
+</html>
