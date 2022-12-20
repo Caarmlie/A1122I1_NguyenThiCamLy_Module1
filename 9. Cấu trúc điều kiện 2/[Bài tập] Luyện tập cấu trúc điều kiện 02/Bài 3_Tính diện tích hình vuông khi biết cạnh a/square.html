@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông khi biết cạnh a.</title>
+</head>
+<body>
+    <label for="a"><b>Nhập cạnh hình vuông</b></label>
+    <input type="text" id="a">
+    <button onclick="submit()">Submit</button>
+</body>
+
+<script>
+    function submit(){
+
+        let a = parseFloat(document.getElementById("a").value)
+        let result = a*a;
+
+        alert("Diện tích hình vuông có cạnh bằng "+a+" là: "+ result)
+
+    }
+</script>
+
+</html>
