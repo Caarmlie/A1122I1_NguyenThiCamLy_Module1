@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra xem một số nhập vào có phải là tuổi của một người</title>
+</head>
+<body>
+    <label for="a"><b>Nhập tuổi của bạn</b></label>
+    <input type="text" id="a">
+    <button onclick="submit()">Submit</button>
+</body>
+
+<script>
+    function submit() {
+        let a = parseInt(document.getElementById("a").value)
+
+        if(a>0&&a<120){
+            alert("Tuổi của bạn là: "+a)
+        }else{
+            alert("Đây không phải là tuổi của một người. Mời bạn nhập lại")
+        }
+    }
+
+</script>
+</html>
