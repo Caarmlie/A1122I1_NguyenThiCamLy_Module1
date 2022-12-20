@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</title>
+</head>
+<body>
+    <label for="a"><b>Nhập cạnh a của hình chữ nhật</b></label>
+    <input type="text" id="a">
+    <br>
+    <label for="b"><b>Nhập cạnh b của hình chữ nhật</b></label>
+    <input type="text" id="b">
+    <br>
+    <button onclick="submit()">Submit</button>
+</body>
+
+<script>
+    function submit(){
+
+        let a = parseFloat(document.getElementById("a").value)
+        let b = parseFloat(document.getElementById("b").value)
+        let result = a*b;
+
+        alert("Diện tích của hình chữ nhật là: "+result)
+
+    }
+</script>
+
+</html>
