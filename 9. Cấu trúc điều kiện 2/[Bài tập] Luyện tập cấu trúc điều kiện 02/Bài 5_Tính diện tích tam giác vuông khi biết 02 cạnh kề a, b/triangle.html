@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b</title>
+</head>
+<body>
+
+    <label for="a"><b>Nhập cạnh vuông thứ nhất của hình tam giác vuông</b></label>
+    <input type="text" id="a">
+    <br>
+    <label for="b"><b>Nhập cạnh vuông thứ hai của hình tam giác vuông</b></label>
+    <input type="text" id="b">
+    <br>
+    <button onclick="submit()">Submit</button>
+
+</body>
+
+<script>
+    function submit(){
+
+        let a = parseFloat(document.getElementById("a").value)
+        let b = parseFloat(document.getElementById("b").value)
+        let result = (1/2)*a*b;
+
+        alert("Diện tích của hình tam giác vuông là: "+result)
+
+    }
+</script>
+
+</html>
