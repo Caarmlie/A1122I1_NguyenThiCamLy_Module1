@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+
+    <label for="a"><b>Nhập a</b></label>
+    <input placeholder="a khác 0" type="text" id="a">
+    <br>
+
+    <label for="b"><b>Nhập b</b></label>
+    <input type="text" id="b">
+    <br>
+
+    <label for="c"><b>Nhập c</b></label>
+    <input type="text" id="c">
+    <br>
+
+    <button onclick="submit()">Submit</button>
+
+</body>
+
+<script>
+    function submit() {
+        let a = parseInt(document.getElementById("a").value)
+        let b = parseInt(document.getElementById("b").value)
+        let c = parseInt(document.getElementById("c").value)
+
+        let delta = (b^2)/(4*a*c);
+        let result = -b/(2*a);
+        let result1 = ((-b+sqrt(delta))/(2*a));
+        let result2 = ((-b-sqrt(delta))/(2*a));
+
+        if(a==0){
+            alert("Xin mời bạn nhập lại")
+        }else if(delta<0){
+            alert("Phương trình vô nghiệm")
+        }else if(delta==0){
+            alert("Phương trình có nghiệm kép x1 = x2 = "+result)
+        }else{
+            alert("Phương trình có 2 nghiệm phân biệt x1 = "+result1+"x2 = "+result2)
+        }
+
+    }
+</script>
+
+</html>
