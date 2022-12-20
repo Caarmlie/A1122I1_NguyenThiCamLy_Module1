@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</title>
+</head>
+<body>
+
+<table>
+
+    <tr>
+        <td>
+            <label for="test1"><b>Nhập điểm kiểm tra miệng</b></label>
+        </td>
+
+        <td>
+            <input type="text" id="test1">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="test2"><b>Nhập điểm kiểm tra 15 phút</b></label>
+        </td>
+        <td>
+            <input type="text" id="test2">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="test3"><b>Nhập điểm kiểm tra 15 phút</b></label>
+        </td>
+
+        <td>
+            <input type="text" id="test3">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="test4"><b>Nhập điểm thi giữa kì</b></label>
+        </td>
+        <td>
+            <input type="text" id="test4">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="test5"><b>Nhập nhập điểm thi học kì</b></label>
+        </td>
+
+        <td>
+            <input type="text" id="test5">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <button onclick="submit()">Submit</button>
+        </td>
+    </tr>
+
+</table>
+
+</body>
+
+<script>
+
+function submit() {
+    let test1 = parseFloat(document.getElementById("test1").value)
+    let test2 = parseFloat(document.getElementById("test2").value)
+    let test3 = parseFloat(document.getElementById("test3").value)
+    let test4 = parseFloat(document.getElementById("test4").value)
+    let test5 = parseFloat(document.getElementById("test5").value)
+    let result = (test1+test2+test3+test4*2+test5*3)/8;
+
+    if(result>=8){
+        alert("Bạn được học sinh giỏi")
+    }else if(result>=6.5){
+        alert("Bạn được học sinh khá")
+    }else if(result>=5){
+        alert("Bạn được học sinh trung bình")
+    }else {
+        alert("Chúng ta sẽ gặp lại nhau thêm lần nữa vào năm sau nhé! Mãi keo")
+    }
+
+}
+
+</script>
+</html>
