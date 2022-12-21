@@ -6,7 +6,45 @@
 </head>
 <body>
 
+<table>
 
+    <tr>
 
+        <td>
+            <label for="money">Nhập số tiền của bạn tại đây</label>
+        </td>
+        <td>
+            <input type="text" id="money">
+        </td>
+    </tr>
+<!---->
+    <tr>
+        <td>
+            <label for="month">Nhập số tháng bạn vay</label>
+        </td>
+        <td>
+            <input type="text" id="month">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="submit()">Submit</button>
+        </td>
+
+    </tr>
+</table>
 </body>
+
+<script>
+
+    function submit() {
+        let money = parseInt(document.getElementById("money").value)
+        let month = parseInt(document.getElementById("month").value)
+        let interestRate = money*(1+(15/100)*month);
+    //    Giả sử lãi suất ngân hàng hàng tháng là 15%
+
+        alert("Số tiền bạn phải trả ngân hàng là: "+interestRate + "VND")
+    }
+
+</script>
 </html>
