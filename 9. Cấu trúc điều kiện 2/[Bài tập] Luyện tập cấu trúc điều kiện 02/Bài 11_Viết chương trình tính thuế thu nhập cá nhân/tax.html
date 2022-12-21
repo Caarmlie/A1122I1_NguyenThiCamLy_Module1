@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+
+    <label for="a"><b>Nhập thu nhập phải chịu thuế của bạn tại đây</b></label>
+    <input placeholder="Month" type="text" id="a">
+    <br>
+
+    <button onclick="submit()">Submit</button>
+
+</body>
+
+<script>
+
+    function submit() {
+        let a = parseFloat(document.getElementById("a").value)
+        let result;
+
+        if(a<5000000){
+            result = a*(5/100);
+            alert("Thuế thu nhập cá nhân của bạn là: "+result + "VND")
+        }else if(a>5000000 && a<10000000){
+            result = a*(10/100);
+            alert("Thuế thu nhập cá nhân của bạn là: "+result + "VND")
+        }else if (a>10000000 && a<18000000){
+            result = a*(15/100);
+            alert("Thuế thu nhập cá nhân của bạn là: "+result + "VND")
+        }else{
+            result = a*(20/100);
+            alert("Thuế thu nhập cá nhân của bạn là: "+result + "VND")
+        }
+    }
+
+</script>
+
+</html>
