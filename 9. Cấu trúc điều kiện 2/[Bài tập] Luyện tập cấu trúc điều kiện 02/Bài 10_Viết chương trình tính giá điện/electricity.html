@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính giá điện</title>
+</head>
+<body>
+
+    <label for="e1"><b>Nhập số điện tháng trước</b></label>
+    <input type="text" id="e1">
+
+    <label for="e2"><b>Nhập số điện tháng này</b></label>
+    <input type="text" id="e2">
+
+    <button onclick="submit()">Submit</button>
+
+</body>
+
+<!--JS-->
+<script>
+
+    function submit() {
+        let e1 = parseFloat(document.getElementById("e1").value)
+        let e2 = parseFloat(document.getElementById("e2").value)
+        let money = (e2-e1)*3500;
+
+        alert("Tiền điện tháng này của bạn là: "+money +"VND")
+    }
+
+</script>
+</html>
