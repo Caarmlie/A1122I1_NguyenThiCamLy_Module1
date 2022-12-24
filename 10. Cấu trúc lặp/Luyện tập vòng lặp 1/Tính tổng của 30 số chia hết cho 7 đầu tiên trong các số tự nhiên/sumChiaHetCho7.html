@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 1-Bài 6</title>
+</head>
+<body>
+
+<!--JS-->
+
+<script>
+
+    let n = +prompt("Nhập giá trị n: ");
+    let i =1;
+    let sum = 0;
+    let j = 0; /*  */
+
+    while(i <= n){
+        j++;
+        if(j % 7 == 0){
+
+            sum = sum + j;
+            document.write(sum + ', ');
+            i++;
+        }
+    }
+
+        alert("Sum = " + sum);
+
+</script>
+
+</body>
+</html>
