@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button onclick="Play()">Play</button>
+<script>
+    function Play() {
+        let x, y, z, r;
+        let count = 0;
+        do {
+            x = +prompt("Start: ");
+            y = +prompt("End:");
+            do {
+                z = +prompt("Let's guess:");
+            } while (z < x && z > y);
+            //Công thức:  Math.floor(Math.random()*(max - min + 1) + min
+            //Math.random()trả về một số dấu phẩy động trong phạm vi [0, 1),
+            // tức là 0 là kết quả có thể xảy ra, còn 1 thì không.
+            //(myMax - myMin + 1)là một số nguyên đại diện cho số lượng các số
+            // nguyên riêng biệt có thể có mà bạn có thể nhận được làm kết quả cuối cùng.
+            // Math.floor(Math.random() * (myMax - myMin + 1)do đó là một dấu phẩy động
+            // trong phạm vi [0,  myMax -  myMin + 1)
+            // Bằng cách thêm myMinvào đó, bạn sẽ có được một
+            // dấu phẩy động trong phạm vi [ myMin,  myMax + 1)
+            //Cuối cùng, bằng cách áp dụng Math.floor(), các giá trị có thể được giới hạn ở
+            // các số nguyên trong phạm vi [ myMin,  myMax + 1), đối với các số nguyên tương đương với { myMin... myMax}.
+            r = Math.floor(Math.random() * (y - x + 1)) + x;
+            alert("Result: " + r);
+            if (z == r) {
+                alert("GOOD")
+            } else if (z < r) {
+                alert("FAIL. The number you entered is smaller.")
+            } else {
+                alert("FAIL. The number you entered is larger.")
+            }
+        }
+            count++;
+    }
+
+    while (count < 3) ;
+    }
+
+</script>
+</body>
+</html>
