@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+
+
+<!--JS-->
+
+<script>
+
+    let number = +prompt("Hiển thị số nguyên tố từ 2 đến số bạn nhập")
+    let count = 0; //để đếm xem số lượng lượng số nguyên tố cần in ra đã bằng numbers hay chưa.
+    let i = 2;
+    let j = 2;
+
+
+    for (i; i <= number; i++){
+        count =0;
+        for(j; j <= i/2; j++){
+            if ( i % j == 0){
+                count++;
+            }
+        }
+        if (count == 0){
+            document.write(i + ",")
+        }
+    }
+
+
+</script>
+</body>
+</html>
