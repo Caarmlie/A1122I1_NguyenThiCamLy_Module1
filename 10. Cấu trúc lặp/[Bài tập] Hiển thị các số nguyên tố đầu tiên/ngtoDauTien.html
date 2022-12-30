@@ -11,11 +11,18 @@
 
 <script>
 
-    let number = +prompt("Hiển thị số nguyên tố từ 2 đến số bạn nhập")
+    let number;
     let count = 0; //để đếm xem số lượng lượng số nguyên tố cần in ra đã bằng numbers hay chưa.
     let i = 2;
     let j = 2;
 
+
+    do{
+        number = +prompt("Hiển thị số nguyên tố từ 2 tới số bạn nhập: ")
+        if (number == 1){
+            alert("Bạn phải nhập số lớn hơn 2. Xin mời bạn nhập lại.")
+        }
+    }while (number == 1)
 
     for (i; i <= number; i++){
         count =0;
