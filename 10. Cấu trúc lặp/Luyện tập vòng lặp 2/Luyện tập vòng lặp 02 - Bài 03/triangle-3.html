@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>triangle-3</title>
+</head>
+<body>
+
+<!--JS-->
+<script>
+
+
+    /*
+         *
+        **
+       ***
+      ****
+     *****
+    ******
+    */
+    let n = +prompt("Nhập n: ")
+
+    for (let i = n ; i >= 0; i--) { // Đại diện cho hàng
+        for (let j = 1; j <= i; j++) { //Đại diện cho cột
+            document.write("&nbsp&nbsp&nbsp")
+        }
+        for(let j=i;j<=n;j++){
+            document.write("* ")
+        }
+        document.write("<br/>")
+    }
+
+</script>
+
+</body>
+</html>
