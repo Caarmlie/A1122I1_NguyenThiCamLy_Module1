@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+
+
+<!--JS-->
+
+<script>
+
+
+    let n = [prompt('Nhập chuỗi kí tự: ')];
+
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    // let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+
+    for(let i=0; i<n.length; i++)
+    {
+        if(UPPER.indexOf(n[i]) === -1)
+
+        /*
+        * Phương indexOf()thức trả về vị trí xuất hiện đầu tiên của một giá trị trong một chuỗi.
+        * Phương indexOf()thức trả về -1 nếu không tìm thấy giá trị.
+        * Phương indexOf()pháp phân biệt chữ hoa chữ thường.
+        * */
+
+        {
+            document.write(n[i].toLowerCase());
+        }
+        else //if (LOWER.indexOf(n[i]) === -1)
+        {
+            document.write(n[i].toUpperCase());
+        }
+        // else {
+        //     document.write(n[i]+' ');
+        // }
+    }
+
+
+
+</script>
+
+
+</body>
+</html>
