@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dictionary</title>
+</head>
+<body>
+
+    <label for="dictionary"></label>
+    <input placeholder="Key" type="text" id="dictionary" name="dictionary">
+    <button type="button" onclick="search()">Search</button>
+
+<!--JS-->
+<script>
+
+function search (){
+
+    let newWord = document.getElementById("dictionary").value;
+    let Eng = ["hello","hi","goodbye","thankyou"];
+    let Vie = ["xin chào","xin chào","tạm biệt","cảm ơn"];
+
+
+
+    // do{
+    //     newWord = [prompt('Nhập từ khóa muốn tìm: ')];
+    //
+    //     if(Eng.indexOf(newWord) == -1){
+    //         document.write("Không tìm thấy từ vừa nhập trong từ điển! Xin mời nhập lại");
+    // }while (Eng.indexOf(newWord) == -1)
+
+
+    if(Eng.indexOf(newWord) !== -1){
+        document.write(Vie[Eng.indexOf(newWord)]);
+    }else{
+        document.write("Không thấy từ vừa nhập trong từ điển!")
+    }
+
+}
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -19,7 +19,7 @@
 
     for(let i=0; i<n.length; i++)
     {
-        if(UPPER.indexOf(n[i]) === -1)
+        if(UPPER.indexOf(n[i]) == -1)
 
         /*
         * Phương indexOf()thức trả về vị trí xuất hiện đầu tiên của một giá trị trong một chuỗi.
@@ -30,7 +30,7 @@
         {
             document.write(n[i].toLowerCase());
         }
-        else //if (LOWER.indexOf(n[i]) === -1)
+        else //if (LOWER.indexOf(n[i]) !== -1)
         {
             document.write(n[i].toUpperCase());
         }
