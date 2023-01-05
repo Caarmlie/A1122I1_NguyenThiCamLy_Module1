@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bài 011</title>
+    <title>Bài 012</title>
 </head>
 <body>
 
 
 <!--JS-->
 
+
 <script>
 
     let n = +prompt("Nhập vào số lượng phần tử của mảng")
-    let count =0;
+    let max = 0;
+    count = 0;
 
     let arr = [];
     for (let i = 1; i <= n; i++) {
@@ -20,17 +22,16 @@
     }
 
     for (let i = 0; i<arr.length; i++){
-        if (arr[i] >= 10){
-            count++;
-            document.write("Những số thỏa mãn điều kiện lớn hơn hoặc bằng 10 là: "+arr[i]+"<br/>")
+        if (arr[i]>max){
+            max = arr[i];
+            count = i + 1;
         }
 
     }
 
-    document.write("Có " + count + " số nguyên lớn hơn hoặc bằng 10");
-
-
+    document.write("Max = "+max+" vị trí thứ "+ count+ " trong mảng bạn vừa nhập");
 
 </script>
+
 </body>
 </html>
