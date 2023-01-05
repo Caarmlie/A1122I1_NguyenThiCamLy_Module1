@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>015</title>
+</head>
+<body>
+
+
+<!--JS-->
+
+
+<script>
+
+    let n = +prompt("Nhập vào số lượng phần tử của mảng")
+    let count =0;
+
+    let arr = [];
+    for (let i = 1; i <= n; i++) {
+        arr[i - 1] = +prompt("Nhập vào phần tử thứ " + arr[i])
+    }
+
+    for (let i = 0; i<arr.length; i++){
+        if (arr[i] <0){
+            count++;
+
+        }
+
+    }
+
+    document.write("Có " + count + " số nguyên âm");
+
+</script>
+</body>
+</html>
