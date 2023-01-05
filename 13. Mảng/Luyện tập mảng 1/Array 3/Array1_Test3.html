@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>013</title>
+</head>
+<body>
+
+
+<!--JS-->
+
+<script>
+
+    let n = +prompt("Nhập vào số lượng phần tử của mảng")
+    let max = 0;
+    let sum = 0;
+    let average = 0;
+
+    let arr = [];
+    for (let i = 1; i <= n; i++) {
+        arr[i -1] = +prompt("Nhập vào phần tử thứ " +i)
+    }
+
+    for (let i = 0; i<arr.length; i++){
+        if (arr[i]>max){
+            max = arr[i];
+            sum = sum + arr[i];
+            average = sum/n;
+
+        }
+
+    }
+
+    document.write("Max = "+max+". Trung bình cộng của các phần tử trong mảng là:  "+ average);
+
+</script>
+
+</body>
+</html>
