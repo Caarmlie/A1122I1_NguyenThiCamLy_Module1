@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>017</title>
+</head>
+<body>
+
+
+<!--JS-->
+
+<script>
+
+    let n = +prompt("Nhập vào số lượng phần tử của mảng");
+
+    let arr = [];
+    for (let i = 1; i <= n; i++) {
+        arr[i-1] = +prompt("Nhập vào phần tử thứ " + i)
+    }
+
+    let find = +prompt("Nhập phần tử bạn muốn tìm");
+    if(arr.includes(find) === true){
+
+        document.write("Mảng ban đầu là: " + arr+" <br/>");
+        document.write(find + " có trong mảng");
+
+        arr.splice(arr.indexOf(find),1); //arr.indexOf(find) --> Duyệt từng phần tử
+        arr.push(0);
+        document.write("<br/>"+"Hàm được xóa bởi phần tử được chọn có dạng là: "+arr);
+
+    }else{
+        document.write(find +" không có trong mảng");
+    }
+
+
+
+</script>
+
+</body>
+</html>
