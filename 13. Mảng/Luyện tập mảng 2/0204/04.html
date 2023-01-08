@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04</title>
+</head>
+<body>
+
+
+<!--JS-->
+
+<script>
+
+    // https://boxhoidap.com/dem-so-ky-tu-trong-chuoi-javascript
+
+    let str = "C O D E G Y M 1 2 3 ";
+    let count = 0;
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i].trim() !== " ") { //Phương trim()thức này loại bỏ khoảng trắng ở cả
+    // hai đầu của chuỗi và trả về một chuỗi mới mà không sửa đổi chuỗi ban đầu.
+            count++
+        }
+    }
+
+    document.write("Số ký từ trong mảng là:"+count);
+</script>
+
+</body>
+</html>
